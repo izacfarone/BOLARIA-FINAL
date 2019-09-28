@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar class="toobarColor">
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="list-bolos" color="light"></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+        Seu Pedido
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <ion-item>
+        <ion-label>Bolo escolhido</ion-label>
+      </ion-item>
+    
+      <ion-card-content>
+        {{ bolo.nome }} por R${{ bolo.valor }},00
+      </ion-card-content>
+    </ion-card>  
+
+    <ion-card>
+      <ion-item>
+        <ion-label>Dados da entrega</ion-label>
+      </ion-item>
+    
+      <ion-card-content>
+          <ion-input placeholder="Nome" [(ngModel)]="endereco.nome"></ion-input>
+          <ion-input placeholder="Telefone" [(ngModel)]="endereco.telefone"></ion-input>
+          <ion-input placeholder="Endereço" type="text" [(ngModel)]="endereco.endereco"></ion-input>
+      </ion-card-content>
+    </ion-card>  
+    
+    <ion-button expand="block" class="p10 btn-add-cart" (click)="handlePedido()">Confirmar pedido</ion-button>
+        
+</ion-content>
