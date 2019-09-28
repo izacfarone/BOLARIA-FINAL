@@ -38,7 +38,7 @@ export class CartPage implements OnInit {
 
     const alert = await this.alertController.create({
       header: 'Pedido Confirmado!',
-      message: 'Daqui a pouco chega 🤗',
+      message: 'Esta chegando',
       buttons: ['OK']
     });
     await alert.present();
